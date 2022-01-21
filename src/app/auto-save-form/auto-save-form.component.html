@@ -1,0 +1,19 @@
+<h3>{{ title }}</h3>
+<hr>
+<br>
+
+<form [formGroup]="userForm">
+    <input type="hidden" formControlName="id">
+    <mat-form-field class="example-full-width" appearance="legacy">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" autocomplete="none">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" appearance="legacy">
+        <mat-label>Lastname</mat-label>
+        <input matInput formControlName="lastname" autocomplete="none">
+    </mat-form-field>
+    <br>
+    <button type="submit" mat-button (click)="markAsRegistered();">Registrar</button>
+    <button type="button" mat-button (click)="cancel();">Cancelar</button>
+</form>

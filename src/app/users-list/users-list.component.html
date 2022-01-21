@@ -1,0 +1,8 @@
+<mat-list role="list">
+    <mat-list-item *ngFor="let user of users" class="list-item" (click)="redirect(user)">
+        <mat-icon mat-list-icon>accessibility</mat-icon>
+        <div mat-line>{{ user.name }}</div>
+        <div mat-line *ngIf="user.registered"><mat-icon>done</mat-icon></div>
+        <div mat-line *ngIf="!user.registered"><mat-icon>pending</mat-icon></div>
+    </mat-list-item>
+</mat-list>
